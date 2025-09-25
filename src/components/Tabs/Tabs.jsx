@@ -1,10 +1,8 @@
 export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
+  if (!tabs || !tabs.length) return null;
+
   const hasActiveTab = tabs.find(tab => tab.id === activeTabId);
   const activeTabData = hasActiveTab || tabs[0];
-
-  if (!tabs.length) {
-    return null;
-  }
 
   return (
     <div data-cy="TabsComponent">
