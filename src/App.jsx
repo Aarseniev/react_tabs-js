@@ -14,6 +14,9 @@ export const App = () => {
   const [activeTab, setActiveTab] = useState('tab-1');
 
   return (
-    <Tabs tabs={tabs} activeTabId={activeTab} onTabSelected={setActiveTab} />
+    <section className="section">
+      <h1 className="title">Selected tab is {activeTab}</h1>
+      <Tabs tabs={tabs} activeTabId={activeTab} onTabSelected={setActiveTab} />
+    </section>
   );
 };
